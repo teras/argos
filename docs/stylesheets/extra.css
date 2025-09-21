@@ -1,0 +1,124 @@
+/* Custom styles for Argos documentation */
+
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.md-typeset h1 {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.5rem;
+}
+
+/* Code blocks with better contrast */
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+}
+
+.md-typeset pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Kotlin syntax highlighting improvements */
+.highlight .k { color: #cf8e6d; } /* Keywords */
+.highlight .kt { color: #cf8e6d; } /* Kotlin keywords */
+.highlight .nc { color: #56b6c2; } /* Class names */
+.highlight .nf { color: #61dafb; } /* Function names */
+.highlight .s { color: #98c379; } /* Strings */
+.highlight .c1 { color: #5c6370; } /* Comments */
+
+/* Improved admonitions */
+.md-typeset .admonition {
+  border-radius: 0.4rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .admonition.note {
+  border-color: #448aff;
+}
+
+.md-typeset .admonition.tip {
+  border-color: #00c853;
+}
+
+.md-typeset .admonition.warning {
+  border-color: #ff9800;
+}
+
+.md-typeset .admonition.danger {
+  border-color: #f44336;
+}
+
+/* Custom navigation styling */
+.md-nav__title {
+  font-weight: 600;
+}
+
+/* Table improvements */
+.md-typeset table {
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.md-typeset table th {
+  background-color: var(--md-primary-fg-color--lightest);
+  font-weight: 600;
+}
+
+/* Button styling */
+.md-button {
+  border-radius: 0.4rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Code copy button styling */
+.md-clipboard {
+  border-radius: 0.2rem;
+}
+
+/* Search improvements */
+.md-search__input {
+  border-radius: 0.4rem;
+}
+
+/* Footer improvements */
+.md-footer {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Homepage feature cards improvements */
+.md-typeset .grid.cards {
+  margin: 0 -0.5rem; /* Reduce left/right margins */
+  gap: 0.5rem; /* Minimal gap between cards */
+}
+
+.md-typeset .grid.cards > * {
+  margin: 0; /* Remove individual card margins */
+  flex: 1; /* Make cards equal width */
+}
+
+/* Increase overall content width */
+.md-main__inner {
+  max-width: none;
+}
+
+.md-content {
+  max-width: 1400px; /* Increase from default ~1200px */
+}

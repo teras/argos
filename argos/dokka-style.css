@@ -1,0 +1,17 @@
+/* Custom Dokka CSS to replace the Kotlin logo with Argos logo */
+
+/* Override the Dokka logo CSS variable to use our Argos logo */
+:root {
+    --dokka-logo-image-url: url('images/Argos.svg') !important;
+}
+
+/* Ensure the logo displays properly */
+.library-name--link::before {
+    background: var(--dokka-logo-image-url) center no-repeat !important;
+    background-size: var(--dokka-logo-height) var(--dokka-logo-width) !important;
+}
+
+/* Alternative fallback for older browsers that might not support CSS variables properly */
+.library-name--link::before {
+    background-image: url('images/Argos.svg') !important;
+}

@@ -1,0 +1,138 @@
+site_name: Argos Documentation
+site_description: Type-safe command-line argument parsing library for Kotlin Multiplatform
+site_author: Argos Contributors
+site_url: https://argos.yot.is
+
+repo_name: teras/argos
+repo_url: https://github.com/teras/argos
+
+docs_dir: 'src'
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Basic Usage: guide/basic-usage.md
+    - Subcommands: guide/subcommands.md
+    - vs Alternatives: features/alternatives.md
+  - Core Concepts:
+    - Arguments Class: core/arguments-class.md
+    - Options: core/options.md
+    - Positional Arguments: core/positional.md
+    - Type Conversions: core/type-conversions.md
+    - Collection Types: core/collections.md
+  - Features:
+    - Validation: features/validation.md
+    - Constraints: features/constraints.md
+    - Environment Variables: features/environment.md
+    - Custom Transformations: features/transformations.md
+    - Password Input: features/passwords.md
+    - Help & Version: features/help-version.md
+  - Domains (Subcommands):
+    - Overview: domains/overview.md
+    - Domain Constraints: domains/domain-constraints.md
+    - Inheritance: domains/inheritance.md
+  - Parsing & Error Handling:
+    - Parsing Methods: parsing/methods.md
+  - Examples:
+    - Build Tool: examples/build-tool.md
+    - Cloud Deployment: examples/cloud-deployment.md
+    - Database Migration: examples/database-migration.md
+  - API Reference:
+    - Full API (Dokka): api/reference.md
+
+theme:
+  name: material
+  language: en
+  logo: Argos.svg
+  favicon: Argos.svg
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      type: date
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/teras/argos
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+copyright: Copyright &copy; 2025 Argos. Licensed under Apache License 2.0.
